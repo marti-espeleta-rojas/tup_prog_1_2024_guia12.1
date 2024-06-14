@@ -68,6 +68,7 @@
             // 
             // InscripcionCompetidor
             // 
+            this.AcceptButton = this.btnAgregar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(281, 136);
@@ -85,8 +86,8 @@
         #endregion
 
         private System.Windows.Forms.Label lbNombre;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         public System.Windows.Forms.TextBox tbNombre;
+        public System.Windows.Forms.Button btnAgregar;
     }
 }

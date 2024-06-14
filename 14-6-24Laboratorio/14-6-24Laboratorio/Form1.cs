@@ -36,9 +36,11 @@ namespace _14_6_24Laboratorio
             for (int i = 0; i < control.cont; i++)
             {
                 if (cargar.ShowDialog() == DialogResult.OK)
-                {
-                    control.AgregarTiempos(control.cont, Convert.ToInt32(cargar.tbHoras.Text), Convert.ToInt32(cargar.tbMins.Text));
+                { 
+                    control.AgregarTiempos(i, Convert.ToInt32(cargar.tbHoras.Text), Convert.ToInt32(cargar.tbMins.Text));
                 }
+                cargar.tbHoras.Clear();
+                cargar.tbMins.Clear();
             }
             cargar.Dispose();
         }
@@ -49,13 +51,16 @@ namespace _14_6_24Laboratorio
             control.MetodoBurbuja();
             for (int i = 0; i<control.cont; i++)
             {
-                ver.lbxResultados.Items.Add($"{i}, {control.names}, {control.tiempos}");
+                int hh = control.tiempos[i] / 60;
+                int mm = control.tiempos[i] % 60;
+                ver.lbxResultados.Items.Add($"{i}, {control.names[i]}, {hh}:{mm}");
             }
+            ver.ShowDialog();
+        }
 
-            if (ver.ShowDialog() == DialogResult.OK)
-            {
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
-            }
         }
     }
 }

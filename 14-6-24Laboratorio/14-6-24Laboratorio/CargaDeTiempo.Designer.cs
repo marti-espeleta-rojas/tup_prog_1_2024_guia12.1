@@ -78,6 +78,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnAgregar.Location = new System.Drawing.Point(75, 128);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
@@ -110,8 +111,8 @@
         private System.Windows.Forms.Label lbNumeroCompetidor;
         private System.Windows.Forms.Label lbNumero;
         private System.Windows.Forms.Label lbTiempo;
-        private System.Windows.Forms.Button btnAgregar;
         public System.Windows.Forms.TextBox tbHoras;
         public System.Windows.Forms.TextBox tbMins;
+        public System.Windows.Forms.Button btnAgregar;
     }
 }
